@@ -1,417 +1,540 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
- 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; frame-src *; connect-src *;">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+  <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+  <meta name="referrer" content="no-referrer" />
+
+  <title>Banca Brasileira</title>
+  <meta name="description" content="Confira os resultados atualizados do jogo do bicho, loterias populares e apostas esportivas. ACERTOS CLUB oferece Pix imediato, suporte 24h e a melhor banca de apostas!" />
+  <meta name="keywords" content="resultado do jogo do bicho, jogo do bicho de hoje, Banca Brasileira, apostas com pix, loterias atualizadas, Banca Brasileira, jogo do bicho paraíba, resultados do jogo do bicho, apostas online confiáveis, cassino online, palpites futebol, BancaBrasileira, apostas seguras, pix na hora, Banca Brasileira resultados" />
+  <meta name="author" content="Banca Brasileira" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Resultado do Jogo do Bicho e Apostas Online | Banca Brasileira" />
+  <meta property="og:description" content="Veja os resultados do bicho de hoje, jogue online com Pix imediato e aproveite os palpites atualizados. Banca Brasileira é a banca número 1 do Brasil!" />
+  <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvGABOEMydl1jhkNoVTcdoClSwMaIrT8ARlAlc1sNqrrKE8IYLcydUOYE7aP2hFfh4N_Kig6MneUtL2FpdeaGpE4x-OS5NcKZUaCfM-kfmMEdWEIr6ZjbVYDkNFYKKv8GcDpeKJDth6JeDyj3qAQeHkI65JvosC3Lrj3eRH9oKReIS8qnE88wukBRCo1I/s200/icon-192%20-%20Copia.png" />
+  <meta property="og:url" content="https://www.BancaBrasileira.net" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Apostas Online e Resultados do Bicho Atualizados | Banca Brasileira" />
+  <meta name="twitter:description" content="Resultados diários do jogo do bicho, apostas esportivas com pagamento instantâneo via Pix. Acesse agora a Banca Brasileira!" />
+  <meta name="twitter:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvGABOEMydl1jhkNoVTcdoClSwMaIrT8ARlAlc1sNqrrKE8IYLcydUOYE7aP2hFfh4N_Kig6MneUtL2FpdeaGpE4x-OS5NcKZUaCfM-kfmMEdWEIr6ZjbVYDkNFYKKv8GcDpeKJDth6JeDyj3qAQeHkI65JvosC3Lrj3eRH9oKReIS8qnE88wukBRCo1I/s200/icon-192%20-%20Copia.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvGABOEMydl1jhkNoVTcdoClSwMaIrT8ARlAlc1sNqrrKE8IYLcydUOYE7aP2hFfh4N_Kig6MneUtL2FpdeaGpE4x-OS5NcKZUaCfM-kfmMEdWEIr6ZjbVYDkNFYKKv8GcDpeKJDth6JeDyj3qAQeHkI65JvosC3Lrj3eRH9oKReIS8qnE88wukBRCo1I/s200/icon-192%20-%20Copia.png" type="image/png">
+  <link rel="shortcut icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvGABOEMydl1jhkNoVTcdoClSwMaIrT8ARlAlc1sNqrrKE8IYLcydUOYE7aP2hFfh4N_Kig6MneUtL2FpdeaGpE4x-OS5NcKZUaCfM-kfmMEdWEIr6ZjbVYDkNFYKKv8GcDpeKJDth6JeDyj3qAQeHkI65JvosC3Lrj3eRH9oKReIS8qnE88wukBRCo1I/s200/icon-192%20-%20Copia.png" type="image/png">
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="canonical" href="https://www.BancaBrasileira.net" />
+
+    <style>
+        /* Estilos gerais para o banner */
+        #app-banner {
+            background-color: #4CAF50; /* Cor de fundo do banner */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            top: 50%;  /* Centraliza o banner na vertical */
+            left: 50%;  /* Centraliza o banner na horizontal */
+            transform: translate(-50%, -50%); /* Centraliza o banner completamente */
+            width: 50%;  /* Metade da largura da tela */
+            height: auto; /* Ajuste a altura conforme o conteúdo */
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;  /* Bordas arredondadas */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        /* Estilo da imagem do ícone com fundo diferente */
+        #app-banner img {
+            width: 120px; /* Aumenta a largura da imagem */
+            height: 120px; /* Aumenta a altura da imagem */
+            margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+            cursor: pointer; /* Aponta o cursor como uma mão, indicando que a imagem é clicável */
+            background-color: 	#FFFAFA; /* Cor de fundo amarela para a imagem */
+            border-radius: 10%; /* Torna a imagem redonda */
+        }
+
+        /* Estilo do texto */
+        #app-banner .banner-text {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilo do link "Baixe agora" */
+        #app-banner a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px; /* Destaque para o link */
+            background-color: transparent; /* Remover a cor de fundo */
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #app-banner a:hover {
+            background-color: #1e5023; /* Cor de fundo do botão quando o mouse passa */
+        }
+
+        /* Estilo do botão de fechar */
+        #close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            padding: 5px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        #close-btn:hover {
+            transform: scale(1.2);
+        }
+
+        /* Animação para o banner */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 600px) {
+            #app-banner {
+                width: 80%;  /* Ajusta para 80% da largura da tela em dispositivos móveis */
+                height: auto;
+            }
+
+            #app-banner img {
+                width: 100px; /* Ajusta o tamanho da imagem para dispositivos móveis */
+                height: 100px;
+            }
+
+            #app-banner .banner-text {
+                font-size: 16px;
+            }
+
+            #app-banner a {
+                font-size: 18px; /* Ajusta o tamanho da fonte no link para dispositivos móveis */
+            }
+        }
+    </style>
 
 
 
 
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-<link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#000000">
-<link rel="apple-touch-icon" href="/icons/icon-192.png">
-
-  
-<!-- Título da Página -->
-<title>banca brasileira</title>
-
-<!-- Ícone do Site -->
-<link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIzHb6YULP9ZDfovS2ACQdcoT4QzjitKjJMdcDJTBWHNlQteuV8LZgv5LcVKi98qZSByWX7MtMFOjFQ8Q7eA1EagZ9SfC6SF7gtuG9biQVeYF1GRDJguqg1_lHFm-MuMlNfN69pUZvRJ8rit6jmh9mVRjqlOzs-GPT_CviHDZCeWrFZGx2VKTLyH8y7ds/s320/aguiaoficial.png" type="image/png">
-
-<!-- Descrição -->
-<meta name="description" content="Baixe nosso app bancabrasileira e acesse dicas de jogos, apostas esportivas, cassino online e palpites confiáveis. Seja bancabrasileira, bancabrasileira e aumente seus ganhos!">
-
-<!-- Palavras-chave -->
-<meta name="keywords" content="bancabrasileira, águia prime, águia de ouro, apostas esportivas, dicas de jogos, cassino online, palpites, bet, futebol, blaze, tiger club, blaze dicas, apostas seguras, jogos que pagam, app de apostas">
-
-<!-- Autor -->
-<meta name="author" content="banca brasileira">
-
-<!-- Robots (indexação) -->
-<meta name="robots" content="index, follow">
-
-<!-- Responsividade -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Canonical -->
-<link rel="canonical" href="https://www.bancabrasileira.net">
-
-<!-- Open Graph (Facebook, WhatsApp, etc.) -->
-<meta property="og:title" content="Águia Oficial Bet | Dicas, Apostas e Cassino">
-<meta property="og:description" content="Dicas de apostas, jogos e cassino para você ganhar mais. Entre para o time Águia Prime!">
-<meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIzHb6YULP9ZDfovS2ACQdcoT4QzjitKjJMdcDJTBWHNlQteuV8LZgv5LcVKi98qZSByWX7MtMFOjFQ8Q7eA1EagZ9SfC6SF7gtuG9biQVeYF1GRDJguqg1_lHFm-MuMlNfN69pUZvRJ8rit6jmh9mVRjqlOzs-GPT_CviHDZCeWrFZGx2VKTLyH8y7ds/s320/aguiaoficial.png">
-<meta property="og:url" content="https://www.bancabrasileira.net">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="pt_BR">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="bancabrasileira">
-<meta name="twitter:description" content="Dicas, palpites e apostas com o time banca brasileira. Faça parte agora!">
-<meta name="twitter:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIzHb6YULP9ZDfovS2ACQdcoT4QzjitKjJMdcDJTBWHNlQteuV8LZgv5LcVKi98qZSByWX7MtMFOjFQ8Q7eA1EagZ9SfC6SF7gtuG9biQVeYF1GRDJguqg1_lHFm-MuMlNfN69pUZvRJ8rit6jmh9mVRjqlOzs-GPT_CviHDZCeWrFZGx2VKTLyH8y7ds/s320/aguiaoficial.png">
-
-<!-- Google Site Verification (adicione seu código do Search Console) -->
-
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VBRR5XWEQY"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8DBWPE37VV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-VBRR5XWEQY');
+  gtag('config', 'G-8DBWPE37VV');
 </script>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+  <!-- Preload do iframe principal -->
+  <link rel="preload" as="document" href="https://app.acertos.club/pr/qcGoRMK0">
+
   <style>
- html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
-  background: linear-gradient(-45deg, #FF00FF, #39FF14, #00FFFF, #FFFF00);
-  background-size: 400% 400%;
-  animation: ledBackground 10s ease infinite;
-}
-
-@keyframes ledBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Estilo base dos botões circulares */
-.floating-btn, #hamburger-menu, #palpites-menu, #indique-menu {
-  position: fixed;
-  width: 48px; /* Reduzido de 60px */
-  height: 48px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease;
-  z-index: 10000;
-  background: #000022;
-  animation: ledGlow 3s linear infinite;
-}
-
-/* Animação do efeito LED colorido */
-@keyframes ledGlow {
-  0% {
-    box-shadow: 0 0 6px #0ff, 0 0 10px #0ff, 0 0 20px #08f, 0 0 30px #60f;
-  }
-  50% {
-    box-shadow: 0 0 10px #f0f, 0 0 20px #f0f, 0 0 30px #a0f, 0 0 40px #d0f;
-  }
-  100% {
-    box-shadow: 0 0 6px #0ff, 0 0 10px #0ff, 0 0 20px #08f, 0 0 30px #60f;
-  }
-}
-
- #botao-whatsapp {
-    right: 490px;
-    background-color: #25D366;
-    border: 2px solid #fff;
-    animation: pulse 1.5s infinite;
-  }
-
-  #botao-whatsapp img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-  }
-
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.1); opacity: 0.8; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-/* Botão flutuante individual */
-.floating-btn {
-  bottom: 20px;
-  right: 20px;
-  width: 45px; /* Reduzido de 60px */
-  height: 45px;
-  background-color: #0000CD;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  z-index: 10000;
-}
-
-
-
-
-    
-  .iframe-container {
-    position: relative;
-    width: 100%;
-    height: calc(102% - 80px);
-    padding: 11px;
-    box-sizing: border-box;
-  }
-
-  .iframe-wrapper {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3),
-                0 0 50px rgba(255, 0, 255, 0.2),
-                0 0 100px rgba(0, 255, 0, 0.1);
-    border: 3px solid transparent;
-    background-image: linear-gradient(#0f0f0f, #0f0f0f), 
-                      linear-gradient(45deg, #00f0ff, #ff00f0, #00ff88, #00f0ff);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    animation: borderGlow 4s linear infinite;
-  }
-
-  iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-
-  @keyframes borderGlow {
-    0% {
-      background-image: linear-gradient(#0f0f0f, #0f0f0f),
-                        linear-gradient(45deg, #00f0ff, #ff00f0, #00ff88, #00f0ff);
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+      font-family: system-ui, sans-serif;
+      color: #fff;
     }
-    50% {
-      background-image: linear-gradient(#0f0f0f, #0f0f0f),
-                        linear-gradient(45deg, #ff00f0, #00ff88, #00f0ff, #ff00f0);
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
     }
-    100% {
-      background-image: linear-gradient(#0f0f0f, #0f0f0f),
-                        linear-gradient(45deg, #00f0ff, #ff00f0, #00ff88, #00f0ff);
+    .iframe-container {
+      flex: 1;
+      width: 100%;
     }
-  }
-</style>
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+      padding: 5px;
+      background: #000;
+    }
+    .button {
+      background: #006400;
+      color: white;
+      padding: 5px 8px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .button.banca {
+      background: #000080;
+    }
+    .button.tutorial {
+      background: #673AB7;
+    }
+    .button img {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+
+    /* Estilo básico para evitar CLS */
+    .logo-container img {
+      width: 256px;
+      height: 170px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .content-container {
+      min-height: 300px; /* Reserve espaço visível enquanto carrega */
+    }
+
+    .button-container {
+      min-height: 60px; /* Evita deslocamento ao carregar botões */
+    }
+
+    #install-banner {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: #111;
+      color: #fff;
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      z-index: 9999;
+      text-align: center;
+      min-height: 100px; /* Evita deslocamento ao aparecer */
+    }
+  </style>
 </head>
 <body>
 
-<div class="iframe-container">
-  <div class="iframe-wrapper">
-    <iframe src="https://app.bancabrasileira.com.br/pr/EYZ6dslW" title="Conteúdo interativo" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
-  </div>
-</div>
-
-<!-- Dados Estruturados (JSON-LD) para SEO -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Águia Oficial Bet",
-  "url": "https://www.bancabrasileira.net/",
-  "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIzHb6YULP9ZDfovS2ACQdcoT4QzjitKjJMdcDJTBWHNlQteuV8LZgv5LcVKi98qZSByWX7MtMFOjFQ8Q7eA1EagZ9SfC6SF7gtuG9biQVeYF1GRDJguqg1_lHFm-MuMlNfN69pUZvRJ8rit6jmh9mVRjqlOzs-GPT_CviHDZCeWrFZGx2VKTLyH8y7ds/s320/aguiaoficial.png",
-  "sameAs": [
-    "https://www.instagram.com/aguiaoficialbet",
-    "https://t.me/aguiaoficial",
-    "https://www.youtube.com/@aguiaoficial"
-  ]
-}
-</script>
+  <!-- Dados estruturados para SEO local e organização -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ACERTOS CLUB",
+    "url": "https://www.acertosclub.com.br",
+    "logo": "https://res.cloudinary.com/dox0ijyes/image/upload/v1746302977/acertos/mina_ca7dtn.webp",
+    "sameAs": [
+      "https://www.instagram.com/acertos.club",
+      "https://www.facebook.com/acertos.club"
+    ]
+  }
+  </script>
 
 
 
+  <script defer>
+    (function () {
+      if (window.location.hostname === "acertosclub.com.br") {
+        window.location.replace("https://www.acertosclub.com.br");
+      }
+    })();
+  </script>
+
+
+   <div class="container">
+    <div class="iframe-container">
+      <iframe allow='clipboard-read; clipboard-write' frameborder='0' height='95%' id='embeddedIframe' loading='lazy' sandbox='allow-scripts allow-same-origin' src='https://app.acertos.club/pr/qcGoRMK0' title='Conteúdo interativo do Acertos Club' width='100%'>
+</iframe>
+    </div>
 
 
 
+    <div class="buttons">
+          
 
-
-
-
-
-
-<!-- Botões Flutuantes: Bomba, Bola, Blaze e Outros -->
-<!-- Botões Flutuantes: Bomba, Bola, Blaze e Outros -->
 <style>
+/* Container do menu hambúrguer dentro da faixa preta */
+#menu-hamburguer {
+  background: #000080;
+  color: white;
+  border-radius: 30px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  user-select: none;
+  margin: 5px auto; /* Centraliza horizontalmente */
+  z-index: 10001;
+}
+
+#menu-hamburguer svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  fill: white;
+  transition: transform 0.3s ease;
+}
+
+/* Quando aberto, rotaciona o ícone */
+#menu-hamburguer.open svg {
+  transform: rotate(90deg);
+}
+
+/* Container dos botões, aparece acima do menu */
+.botoes-container {
+  position: absolute;
+  bottom: 50px; /* Posiciona acima do menu */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 14px;
+  z-index: 10000;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+  width: auto;
+  max-width: 95vw;
+}
+
+/* Mostrar container quando aberto */
+.botoes-container.open {
+  max-height: 100px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Botões flutuantes */
+.botao-flutuante {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  width: 55px;
+  height: 55px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.botao-flutuante img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.botao-flutuante:hover {
+  transform: scale(1.1);
+}
+
+#botao-blaze {
+  background-color: #000;
+  border: 2px solid #ff0000;
+  animation: pulse 1.5s infinite;
+  padding: 8px;
+}
+
+#botao-blaze img {
+  width: 120%;
+  height: 120%;
+  object-fit: contain;
+}
+
+#botao-brasil {
+  background-color: #009c3b;
+  border: 2px solid #fedf00;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.6); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+}
+
+/* Esconde barra de scroll horizontal */
+.botoes-container::-webkit-scrollbar {
+  display: none;
+}
+
+.botoes-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (max-width: 500px) {
+  #menu-hamburguer {
+    padding: 6px 12px;
+  }
+
   .botao-flutuante {
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    border-radius: 50%;
+    width: 48px;
+    height: 48px;
     font-size: 18px;
-    width: 45px;
-    height: 45px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    padding: 0;
-    flex-shrink: 0;
   }
 
   .botao-flutuante img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .botao-flutuante:hover {
-    transform: scale(1.1);
-  }
-
-  #botao-blaze {
-    background-color: #000;
-    border: 2px solid #ff0000;
-    animation: pulse 1.5s infinite;
-    padding: 6px;
-  }
-
-  #botao-blaze img {
-    width: 120%;
-    height: 120%;
-    object-fit: contain;
-  }
-
-  #botao-brasil {
-    background-color: #009c3b;
-    border: 2px solid #fedf00;
-  }
-
-  @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.6); }
-    70% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+    width: 80%;
+    height: 80%;
   }
 
   .botoes-container {
-    position: fixed;
-    bottom: 10px;
-    left: 0;
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: center;
-    gap: 8px;
+    bottom: 45px;
     padding: 8px 10px;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 9999;
   }
-
-  .botoes-container::-webkit-scrollbar {
-    display: none;
-  }
-
-  .botoes-container {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  @media (max-width: 500px) {
-    .botao-flutuante {
-      width: 40px;
-      height: 40px;
-    }
-
-    .botao-flutuante img {
-      width: 80%;
-      height: 80%;
-    }
-  }
+}
 </style>
 
-<div class="botoes-container">
+
+<!-- Menu hambúrguer inferior centralizado -->
+<div id="menu-hamburguer" aria-label="Menu Bancas Parceiras" role="button" tabindex="0">
+  <!-- Ícone hambúrguer SVG -->
+  <svg viewbox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M3 6h18M3 12h18M3 18h18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  </path></svg>
+  <span>bancas parceiras</span>
+</div>
+
+<!-- Container com os botões, escondido inicialmente -->
+<div class="botoes-container" id="botoes-container">
+  <button id="botao-bola" class="botao-flutuante" title="Brasileirão ⚽">
+
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipYPTTkFyY_Kz6X4rgvnQn233SS0YmkXcWA0FSwC0a_-Zb7wsReyU1arZiUe0DLqJwxWyBv3Bzx90ytWj_waO3knVSVIFUZvxBm_bfaJ0sxGU8UHAuKiAzFDbij1l8F_P3YX7E3rwqfKve3NS_yCB9234wEf8AGzmHr-vQ0zoutGk9WQhxh0CFRQBtPdgo/s200/4297950.png" alt="botao-bola" />
+  </button>
+
   
-  <button id="botao-bola" class="botao-flutuante" title="Brasileirão ⚽">⚽</button>
-
-  <button id="botao-blaze" class="botao-flutuante" title="Ir para Blaze 🔥">
-    <img src="https://blaze.partners/_next/image?url=%2Fimages%2Flogo.png&w=1080&q=75" alt="Blaze" />
-  </button>
-
-  <button id="botao-palpites" class="botao-flutuante" title="Palpites">
-    <img src="https://st4.depositphotos.com/1432405/20213/v/450/depositphotos_202134304-stock-illustration-gallic-rooster-icon-white.jpg" alt="palpites" />
-  </button>
 
   <button id="botao-tigerclub" class="botao-flutuante" title="Tiger Club">
-    <img src="https://assets.trivo.bet/images/tigerclub.png" alt="tigerclub" />
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi2MQAJsSnixWBwPePeepwQaL0qFJdgrQMGvQmgrFk_KV5F4qd4SeG7Hj_Ng9elzVA-K7oxG6-dxevoqa48WIGXfeZ4OIWzbpCVItzlbIeV2VXBvUalfok7MDRV-upu6Ga0RDoG-_74RZRtvlzb8THF_asV1VBH8nsAyTUh-vwEI_3UJu3ZlL422-J_w398/s200/jogar" alt="tigerclub" />
   </button>
 
   <button id="botao-feiticeira" class="botao-flutuante" title="Feiticeira VIP">
-    <img src="https://www.feiticeiravip.com.br/icons/minas.png" alt="feiticeira" />
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5PSxoE5NTJam5yGS0MPDUBSqt8o3Ty-BIw33xjuz-b5bW6anh9qzgSROENvoY_3E1tM52C8N0vaDYr07p3KkC_NlgYx9FbxVzf9rDp1mSJwAWmyo7Vc4pzfg4eDFOYephOosYqgnJgSENyUcUlPAynzuflifeLJ5k0lSc_MrnZ_Sa0uNG2X09ATLNSFXf/s320/minas2%20%281%29.png" alt="feiticeira" />
   </button>
 
   <button id="botao-acertos" class="botao-flutuante" title="Acertos Club">
-    <img src="https://raw.githubusercontent.com/lucianodelira/ACERTOSCLUB.COM.BR/refs/heads/main/icons/mina.png" alt="acertos" />
+    <img src="https://raw.githubusercontent.com/lucianodelira/ACERTOSCLUB.COM.BR/refs/heads/main/icons/mina.png" alt="acertos" alt="acertos" />
   </button>
 
   <button id="botao-brasil" class="botao-flutuante" title="Banca Brasileira">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/330px-Flag_of_Brazil.svg.png" alt="Brasil" />
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrcxu6Uk7T-3p7nOeoaQ3Mm58dCzom7gsosXvXeh3_IHVU0Go837CkD19wjF3HkS3lVA5R0BkvzL1ZpNMpKx3AYcWWPS_Rnu7Pei50meXdIz15Lp0JRoiOK5Zlq8iBPetpXTmyBSVyfZMuz2Incf5HRefwQJpUK0i3aIlljoPIe2po61wvaodTLAZveH5V/s200/bancabrasileira.png" alt="Brasil" />
   </button>
 
-  <button id="botao-whatsapp" class="botao-flutuante" title="Fale no WhatsApp">
-    <img alt="WhatsApp" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+<button id="whatzap" class="botao-flutuante" title="whatzap">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Brasil" />
   </button>
+
+
+
+
 </div>
 
 <script>
+  const menu = document.getElementById('menu-hamburguer');
+  const botoesContainer = document.getElementById('botoes-container');
 
+  function toggleMenu() {
+    const aberto = menu.classList.toggle('open');
+    if (aberto) {
+      botoesContainer.classList.add('open');
+    } else {
+      botoesContainer.classList.remove('open');
+    }
+  }
 
+  menu.addEventListener('click', toggleMenu);
+
+  // Permitir abrir/fechar com Enter ou Espaço para acessibilidade
+  menu.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleMenu();
+    }
+  });
+
+  // Eventos dos botões
   document.getElementById("botao-bola").addEventListener("click", function () {
     window.location.href = "https://www.brasileirao.site";
   });
 
-  document.getElementById("botao-blaze").addEventListener("click", function () {
-    window.location.href = "https://blaze.cxclick.com/visit/?bta=50593&brand=blaze";
-  });
+  
 
-  document.getElementById("botao-palpites").addEventListener("click", function () {
-    window.open("https://trivo.acertosclub.com", "_blank");
-  });
+  
 
   document.getElementById("botao-tigerclub").addEventListener("click", function () {
-    window.open("https://app.tigersclub.vip/pr/cmDAwXiS", "_blank");
+    window.open("https://WWW.TIGERSCLUB.NET", "_blank");
   });
 
   document.getElementById("botao-feiticeira").addEventListener("click", function () {
-    window.open("https://app.feiticeira.vip/pr/PRBJ9rmd", "_blank");
+    window.open("https://www.feiticeiravip.com.br", "_blank");
   });
 
   document.getElementById("botao-acertos").addEventListener("click", function () {
@@ -419,97 +542,132 @@
   });
 
   document.getElementById("botao-brasil").addEventListener("click", function () {
-    window.open("https://app.bancabrasileira.com.br/pr/EYZ6dslW", "_blank");
+    window.open("https://www.bancabrasileira.net", "_blank");
   });
 
-  document.getElementById("botao-whatsapp").addEventListener("click", function () {
-    window.open("https://wa.me/+5583993209139?text=Ol%C3%A1,%20gostaria%20de%20jogar!como%20fa%C3%A7o?", "_blank");
+
+document.getElementById("whatzap").addEventListener("click", function () {
+    window.open("https://wa.me/+5583993209139?text=Ol%C3%A1,%20gostaria%20de%20jogar!", "_blank");
   });
+
 </script>
 
 
-<div id="installPrompt" style="
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #000;
-  color: #fff;
-  padding: 14px 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  z-index: 9999;
-  font-family: sans-serif;
-  text-align: center;
-">
-  Deseja instalar o app Águia Oficial?
-  <button id="btnInstall" style="
-    margin-left: 12px;
-    background: #1db954;
-    border: none;
-    color: white;
-    padding: 8px 14px;
-    border-radius: 8px;
-    cursor: pointer;
-  ">Instalar</button>
+    </div>
+  </div>
+
+  <!-- Banner de instalação -->
+  <div id="install-banner">
+    <p style="margin: 0 0 10px;">📲 Instale nosso app para acesso mais rápido e fácil!</p>
+    <button onclick="instalarApp()" style="background: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer;">Instalar App
+::contentReference[oaicite:23]{index=23}
+
+  </button>
 </div>
 
-
-<script>
+<script defer>
   let deferredPrompt;
 
-  window.addEventListener("beforeinstallprompt", (e) => {
+  window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
-    const promptEl = document.getElementById("installPrompt");
-    promptEl.style.display = "block";
+    const banner = document.getElementById('install-banner');
+    if (banner) banner.style.display = 'block';
+  });
 
-    document.getElementById("btnInstall").addEventListener("click", () => {
-      promptEl.style.display = "none";
+  function instalarApp() {
+    if (deferredPrompt) {
       deferredPrompt.prompt();
-
       deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === "accepted") {
-          console.log("Usuário aceitou instalar o app");
+        if (choiceResult.outcome === 'accepted') {
+          console.log('Usuário aceitou instalar o app');
         } else {
-          console.log("Usuário recusou a instalação");
+          console.log('Usuário recusou instalar o app');
         }
         deferredPrompt = null;
+        document.getElementById('install-banner').style.display = 'none';
       });
-    });
-  });
+    }
+  }
 
-  // Oculta o aviso se o app já estiver instalado
-  window.addEventListener("appinstalled", () => {
-    console.log("App instalado");
-    document.getElementById("installPrompt").style.display = "none";
+  // Carregamento assíncrono do iframe principal
+  window.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('embeddedIframe').src = "https://app.acertos.club/pr/qcGoRMK0";
   });
 </script>
 
 
+<!-- Banner TigerClub - Mostra 1x por dia -->
+<style>
+  #tiger-banner {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 12px;
+    max-width: 90vw;
+  }
 
+  #tiger-banner img {
+    width: 70vw;
+    max-width: 500px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  }
 
+  #close-tiger-banner {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 30px;
+  }
+</style>
 
-
-
-
-
-
-
-
-  
-
+<div id="tiger-banner">
+  <button id="close-tiger-banner">&times;</button>
+  <a href="https://app.tigersclub.vip/pr/cmDAwXiS" target="_blank">
+    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhDfU7KlZtVpdu4yPEuuPbxlsbYhyW7EKKH4uJT934IQ26BKFHoNY-PQkAGoxPW6pFATINR5p73r53zbxnqbc5Wtk3IT2nCiloRbHImtf_pwecqP7B7a8mpw1Aezc-vr0TKQ4X_uidZfN5kcTnftOIqKuq6MN5JnXg6A651tumHvy4_CJi8GrTEE6IDDhQ=s1600" alt="Promoção Tiger Club" />
+  </a>
+</div>
 
 <script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function () {
-      navigator.serviceWorker.register("/service-worker.js")
-        .then(reg => console.log("Service Worker registrado:", reg.scope))
-        .catch(err => console.log("Erro ao registrar o Service Worker:", err));
-    });
-  }
+  window.addEventListener('load', function () {
+    const lastShown = localStorage.getItem('tigerBannerLastShown');
+    const now = new Date().getTime();
+    const oneDay = 24 * 60 * 60 * 1000; // 24 horas em ms
+
+    if (!lastShown || now - lastShown > oneDay) {
+      // Espera 5 segundos para mostrar
+      setTimeout(() => {
+        document.getElementById("tiger-banner").style.display = "block";
+        // Atualiza a data de exibição
+        localStorage.setItem('tigerBannerLastShown', now.toString());
+      }, 5000);
+    }
+
+    document.getElementById("close-tiger-banner").onclick = function () {
+      document.getElementById("tiger-banner").style.display = "none";
+    };
+  });
 </script>
-  
+
+
+    
 </body>
 </html>
