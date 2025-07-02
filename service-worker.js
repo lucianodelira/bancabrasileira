@@ -1,4 +1,4 @@
-const CACHE_NAME = "aguia-cache-v1";
+const CACHE_NAME = "Brasileira-cache-v1";
 const urlsToCache = [
   "/",
   "/index.html",
